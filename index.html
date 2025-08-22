@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English | জানালা</title>
+
+    <!-- DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- CustomStyle -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      /* GoogleFonts */
+      @import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      /* BanglaFonts */
+      @font-face {
+        font-family: "Siyam Rupali";
+        src: url("fonts/siyamrupali-webfont.eot");
+        src: url("fonts/siyamrupali-webfont.eot?#iefix")
+          format("embedded-opentype");
+        src: local("Siyam Rupali Regular"), local("Siyam Rupali"),
+          url("fonts/siyamrupali-webfont.woff") format("woff"),
+          url("fonts/siyamrupali-webfont.otf") format("opentype"),
+          url("fonts/siyamrupali-webfont.svg#siyam_rupaliregular") format("svg");
+        font-weight: normal;
+        font-style: normal;
+        unicode-range: U+0980-09FF;
+      }
+      body {
+        font-family: "Siyam Rupali", Cambria, sans-serif;
+        font-family: "Poppins", sans-serif;
+      }
+      .dynamic-font {
+        font-family: "Hind Siliguri", sans-serif;
+      }
+      .active {
+        background-color: #422ad5;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header
+      id="navbar"
+      class="bg-transparent shadow-md fixed w-full top-0 left-0 z-50 transition-all duration-300 hideSection"
+    >
+      <!-- Navbar -->
+      <nav
+        id="nav"
+        class="w-11/12 mx-auto flex flex-wrap justify-between items-center py-4 md:py-6 transition-all duration-300"
+      >
+        <!-- Logo -->
+        <div class="mb-3 md:mb-0">
+          <a href="#" class="inline-flex items-center gap-1">
+            <span class="text-base font-semibold">English</span>
+            <img class="w-6" src="./assets/logo.png" alt="logo" />
+            <span class="text-base font-semibold">জানালা</span>
+          </a>
+        </div>
+        <!-- NavItems -->
+        <div class="flex flex-wrap gap-2 sm:gap-3 md:gap-4">
+          <a
+            href="#learn"
+            data-target="learn"
+            class="scroll-btn cursor-pointer text-[#422AD5] text-sm md:text-base font-semibold border border-[#422AD5] rounded py-1 px-3 hover:bg-[#422AD5] hover:text-white transition-colors duration-300"
+          >
+            <i class="fa-solid fa-book-open"></i> Learn
+          </a>
+
+          <a
+            href="#faq"
+            data-target="faq"
+            class="scroll-btn cursor-pointer text-[#422AD5] text-sm md:text-base font-semibold border border-[#422AD5] rounded py-1 px-3 hover:bg-[#422AD5] hover:text-white transition-colors duration-300"
+          >
+            <i class="fa-solid fa-circle-question"></i> FAQ
+          </a>
+          <button
+            id="logout"
+            class="cursor-pointer text-[#422AD5] text-sm md:text-base font-semibold border border-[#422AD5] rounded py-1 px-3 hover:bg-[#422AD5] hover:text-white transition-colors duration-300"
+          >
+            <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+          </button>
+        </div>
+      </nav>
+    </header>
+    <!-- Main -->
+    <main class="w-11/12 mx-auto">
+      <!-- BannerSection -->
+      <section id="banner-container" class="pt-28 md:pt-36">
+        <div
+          class="flex flex-col-reverse md:flex-row justify-between items-center gap-8 md:gap-4 py-10 md:py-25"
+        >
+          <!-- BannerContent -->
+          <div class="text-center md:text-left md:w-1/2">
+            <!-- Title -->
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold">
+              <span class="text-[#00BCFF]">English</span>
+              <span class="text-[#18181B]">is Easy!!</span>
+            </h1>
+
+            <!-- Description -->
+            <p class="py-6 text-sm sm:text-base">
+              আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+              আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে
+              যাবে অন্য একটি Level এ
+            </p>
+
+            <!-- LoginInput -->
+            <div class="flex flex-col gap-6">
+              <!-- UserNameInput -->
+              <div>
+                <label class="input">
+                  <svg
+                    class="h-[1em] opacity-50"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      stroke-width="2.5"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <path
+                        d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"
+                      ></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </g>
+                  </svg>
+                  <input
+                    id="userName"
+                    type="text"
+                    required
+                    placeholder="Username"
+                  />
+                </label>
+              </div>
+              <!-- PasswordInput -->
+              <div>
+                <label class="input">
+                  <svg
+                    class="h-[1em] opacity-50"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                  >
+                    <g
+                      stroke-linejoin="round"
+                      stroke-linecap="round"
+                      stroke-width="2.5"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <path
+                        d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"
+                      ></path>
+                      <circle
+                        cx="16.5"
+                        cy="7.5"
+                        r=".5"
+                        fill="currentColor"
+                      ></circle>
+                    </g>
+                  </svg>
+                  <input
+                    id="password"
+                    type="password"
+                    required
+                    placeholder="Password (123456)"
+                  />
+                </label>
+              </div>
+              <!-- LoginButton -->
+              <div>
+                <button
+                  id="login"
+                  class="w-auto cursor-pointer text-white text-base font-semibold bg-[#422AD5] border border-[#422AD5] rounded py-2 px-4 hover:bg-transparent hover:text-[#422AD5] transition-colors duration-300"
+                >
+                  Get Started
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- BannerImage -->
+          <div class="md:w-1/2">
+            <img
+              class="w-full h-auto max-w-sm md:max-w-full mx-auto"
+              src="./assets/hero-banner.png"
+              alt="student"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- LearnVocabularySection -->
+      <section id="learn" class="text-center py-16 md:py-25 hideSection">
+        <!-- Title -->
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold">
+          <span class="text-[#00BCFF]">Let's</span>
+          <span class="text-[#18181B]">Learn Vocabularies</span>
+        </h2>
+
+        <!-- VocabularyLessonLevelContainer -->
+        <nav
+          id="lessonLevelContainer"
+          class="flex flex-wrap justify-center items-center gap-2 sm:gap-4 py-6 md:py-10"
+        ></nav>
+
+        <!-- LoaderContainer -->
+        <div id="loader" class="text-center pb-10 hidden">
+          <span class="loading loading-dots loading-xl"></span>
+        </div>
+
+        <!-- DynamicContainer -->
+        <div
+          id="dynamicLessonWordsContainer"
+          class="dynamic-font grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 w-full bg-[#F8F8F8] rounded-3xl p-6 sm:p-10 md:p-16"
+        >
+          <!-- StaticContainer -->
+          <div
+            id="staticLessonContainer"
+            class="dynamic-font w-full bg-[#F8F8F8] rounded-3xl py-10 sm:py-16"
+          >
+            <span class="text-sm text-[#79716B]"
+              >আপনি এখনো কোন Lesson Select করেন নি</span
+            >
+            <p
+              class="text-xl sm:text-2xl md:text-4xl text-[#292524] font-medium pt-4"
+            >
+              একটি Lesson Select করুন।
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modal -->
+      <dialog id="wordDetails" class="modal">
+        <div class="modal-box max-w-lg">
+          <div id="wordDetailsContainer" class="flex flex-col gap-3 p-3"></div>
+          <div class="modal-action">
+            <form method="dialog">
+              <button
+                class="btn text-white text-sm md:text-base font-semibold bg-[#422AD5] border border-[#422AD5] rounded py-1 px-3 hover:bg-transparent hover:text-[#422AD5] transition-colors duration-300"
+              >
+                Complete Learning
+              </button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- FAQSection -->
+      <section id="faq" class="text-center py-16 md:py-25 hideSection">
+        <!-- Title -->
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold">
+          <span class="text-[#00BCFF]">Frequently</span>
+          <span class="text-[#18181B]">Asked Questions</span>
+        </h2>
+
+        <!-- FAQContainer -->
+        <div class="text-left py-6 md:py-10 space-y-3">
+          <!-- Question1 -->
+          <div
+            class="collapse collapse-plus bg-[#F8F8F8] border border-[#F8F8F8] my-2"
+          >
+            <input type="radio" name="my-accordion-3" checked="checked" />
+            <div class="collapse-title font-semibold">
+              What is the difference between var, let and const?
+            </div>
+            <div class="collapse-content text-sm">
+              'var' is function-scoped and old, 'let' is block-scoped and
+              re-assignable, and 'const' is block-scoped and not re-assignable.
+              Use const by default, switch to let if value changes and avoid
+              var.
+            </div>
+          </div>
+          <!-- Question2 -->
+          <div
+            class="collapse collapse-plus bg-[#F8F8F8] border border-[#F8F8F8] my-2"
+          >
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">
+              What is the difference between map(), forEach() and filter()?
+            </div>
+            <div class="collapse-content text-sm">
+              <ul>
+                <li>
+                  1. forEach() → Loops through an array, lets you run code on
+                  each item, but returns undefined.
+                </li>
+                <li>
+                  2. map() → Loops through an array and returns a new array with
+                  transformed values.
+                </li>
+                <li>
+                  3. filter() → Loops through an array and returns a new array
+                  with items that pass a condition.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Question3 -->
+          <div
+            class="collapse collapse-plus bg-[#F8F8F8] border border-[#F8F8F8] my-2"
+          >
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">
+              What are arrow functions and how are they different from regular
+              functions?
+            </div>
+            <div class="collapse-content text-sm">
+              Arrow functions (()=>{}) are a shorter way to write functions.
+              Unlike regular functions, they don’t have their own this,
+              arguments, super or new.target.
+            </div>
+          </div>
+          <!-- Question4 -->
+          <div
+            class="collapse collapse-plus bg-[#F8F8F8] border border-[#F8F8F8] my-2"
+          >
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">
+              How does JavaScript Promises work?
+            </div>
+            <div class="collapse-content text-sm">
+              A Promise is an object that represents the eventual completion (or
+              failure) of an asynchronous operation. It can be in one of three
+              states:
+              <ul>
+                <li>1. Pending → still running</li>
+                <li>2. Fulfilled → finished successfully (.then)</li>
+                <li>3. Rejected → failed (.catch)</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Question5 -->
+          <div
+            class="collapse collapse-plus bg-[#F8F8F8] border border-[#F8F8F8] my-2"
+          >
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title font-semibold">
+              How does closure work in JavaScript?
+            </div>
+            <div class="collapse-content text-sm">
+              A 'closure' is created when a function remembers and can access
+              variables from its outer scope, even after that outer function has
+              finished executing.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-11/12 mx-auto border-t-2 border-[#FFEBEB] py-10 md:py-25">
+      <div
+        class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8"
+      >
+        <div>
+          <div class="flex items-center gap-1">
+            <span class="text-base font-semibold">English</span>
+            <img class="w-6" src="./assets/logo.png" alt="logo" />
+            <span class="text-base font-semibold">জানালা</span>
+          </div>
+          <p class="text-black text-lg md:text-xl font-medium pt-5 pb-2">
+            ইংরেজি শিখুন সহজে
+          </p>
+          <span class="text-black text-sm md:text-base"
+            >Providing ED-Tech Applications since 2025</span
+          >
+        </div>
+        <div>
+          <p class="uppercase font-medium">Follow Us</p>
+          <div class="flex items-center gap-3 pt-3">
+            <a
+              href="#"
+              class="text-black text-base hover:text-[#422AD5] transition-colors duration-300"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a
+              href="#"
+              class="text-black text-base hover:text-[#422AD5] transition-colors duration-300"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+            <a
+              href="#"
+              class="text-black text-base hover:text-[#422AD5] transition-colors duration-300"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- TailwindCSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/a5088e6086.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CustomScript -->
+    <script src="./script/index.js"></script>
+  </body>
+</html>
